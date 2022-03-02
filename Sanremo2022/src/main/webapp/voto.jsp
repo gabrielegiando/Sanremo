@@ -3,6 +3,8 @@
     <%@ page import="java.io.*, java.util.*,entita.*"%>
 <%@ page import=" java.util.Date "%>
 <%@ page import=" java.text.SimpleDateFormat"%>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,8 +25,8 @@
 		<p><%= cantanti.get(i).getCognome() %></p>
 		<p><%= cantanti.get(i).getNomeArte() %></p>
 		<img width="100px" src="<%= cantanti.get(i).getImmagine() %>">
-		<a href="ConfermaVoto.jsp?voto=positivo&indice=<%=i %>">Positivo</a>
-		<a href="ConfermaVoto.jsp?voto=negativo&indice=<%=i %>">Negativo</a>
+		<button type="button" class="btn btn-success"><a href="ConfermaVoto.jsp?voto=positivo&indice=<%=i %>">Positivo</a></button>
+		<button type="button" class="btn btn-danger"><a href="ConfermaVoto.jsp?voto=negativo&indice=<%=i %>">Negativo</a></button>
 	
 	</body>
 </html>

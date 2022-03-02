@@ -3,7 +3,7 @@
 <%@ page import="java.io.*, java.util.*,entita.*"%>
 <%@ page import=" java.util.Date "%>
 <%@ page import=" java.text.SimpleDateFormat"%>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 <!DOCTYPE html>
 <html>
@@ -61,8 +61,8 @@ int i=0, j=0;
 	<p><%= cantanti.get(i).getNomeArte() %></p>
 	<img width="100px" src="<%= cantanti.get(i).getImmagine() %>">
 	<a href="voto.jsp?nome=<%= cantanti.get(i).getNome() %>&indice=<%=i %>"><%= lingua.get(chiave) %></a>
-	<p><%= cantanti.get(i).getPositivi() %> || Voti positivi</p>
-	<p><%= cantanti.get(i).getNegativi() %> || Voti negativi</p>
+	<p> <%= cantanti.get(i).getPositivi() %> <p style="color:green;">|| Voti positivi</p>
+	<p><%= cantanti.get(i).getNegativi() %> <p style="color:red;">|| Voti negativi</p>
 
 <% } %>
 
